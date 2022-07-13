@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laser Game</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #111111;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="lasergame-canvas-div">
+      <canvas id="laser-game-canvas" height="400px" width="400px"></canvas>
+    </div>
+
+    <div>
+      <pre id="paths-pre">This is where the paths are supposed to be.</pre>
+    </div>
+
+    <div>
+      <p><a href="how-to-play.html">How To Play</a></p>
+      <p id="victory-p">Free Play. Click Seed Level or Daily Level to play a level.</p>
+      <label for="edges">Edges to match to win:</label>
+      <input type="number" id="edges" name="edges" value="5" min="1" max="20" />
+      <span class="validity"></span>
+      <br>
+      <label for="seed">Seed:</label>
+      <input type="text" id="seed" name="seed" placeholder="Enter seed"/>
+      <br>
+      <label>Set seed:</label>
+      <input type="button" onclick="document.getElementById('seed').value = Date.now()" value="Current Time Seed" />
+      <br>
+      <input type="button" id="seed-level" value="Seed Level" />
+      <input type="button" id="daily-level" value="Daily Level" />
+      <p>Refresh the page to go back to free play.</p>
+    </div>
+
+    <script type="module" src="/src/frontend/FrontendLasergame.ts"></script>
+  </body>
+</html>

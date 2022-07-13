@@ -1,0 +1,29 @@
+{
+  "name": "lasergame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KProskuryakov/lasergame.git"
+  },
+  "author": "KProskuryakov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KProskuryakov/lasergame/issues"
+  },
+  "homepage": "https://github.com/KProskuryakov/lasergame#readme",
+  "devDependencies": {
+    "@types/seedrandom": "^3.0.2",
+    "typescript": "^4.7.4",
+    "vite": "^2.9.14"
+  },
+  "dependencies": {
+    "seedrandom": "^3.0.5"
+  }
+}
