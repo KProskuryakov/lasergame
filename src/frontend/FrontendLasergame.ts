@@ -10,8 +10,8 @@ import { canvas, ctx, pathsPre, victoryP, seedLevelButton, seedInput, edgesInput
 import { generateLevel } from "../LevelGenerator";
 import seedrandom from "seedrandom";
 
-export const toolbar = new ToolbarComponent("/toolbar.png", { x: 0, y: 7 }, 8, 1, draw);
-export const lasergridComponent = new LaserGridComponent("/lasergrid.png", { x: 0, y: 0 }, 7, 7, draw);
+export const toolbar = new ToolbarComponent("toolbar.png", { x: 0, y: 7 }, 8, 1, draw);
+export const lasergridComponent = new LaserGridComponent("lasergrid.png", { x: 0, y: 0 }, 7, 7, draw);
 
 export const pieceComponents: PieceComponent[] = [];
 
@@ -34,15 +34,15 @@ function init() {
   seedLevelButton.addEventListener("click", seedLevel);
   dailyLevelButton.addEventListener("click", dailyLevel);
 
-  pieceComponents[PieceID.FORWARD_SLASH] = new PieceComponent("/pieces/mirror_forwardslash.png", draw);
-  pieceComponents[PieceID.BACK_SLASH] = new PieceComponent("/pieces/mirror_backslash.png", draw);
-  pieceComponents[PieceID.BLACK_HOLE] = new PieceComponent("/pieces/mirror_blackhole.png", draw);
-  pieceComponents[PieceID.HORI_SPLIT] = new PieceComponent("/pieces/mirror_sidesplit.png", draw);
-  pieceComponents[PieceID.VERT_SPLIT] = new PieceComponent("/pieces/mirror_upsplit.png", draw);
+  pieceComponents[PieceID.FORWARD_SLASH] = new PieceComponent("pieces/mirror_forwardslash.png", draw);
+  pieceComponents[PieceID.BACK_SLASH] = new PieceComponent("pieces/mirror_backslash.png", draw);
+  pieceComponents[PieceID.BLACK_HOLE] = new PieceComponent("pieces/mirror_blackhole.png", draw);
+  pieceComponents[PieceID.HORI_SPLIT] = new PieceComponent("pieces/mirror_sidesplit.png", draw);
+  pieceComponents[PieceID.VERT_SPLIT] = new PieceComponent("pieces/mirror_upsplit.png", draw);
 
-  pieceComponents[PieceID.BLUE] = new PieceComponent("/pieces/swatch_blue.png", draw);
-  pieceComponents[PieceID.RED] = new PieceComponent("/pieces/swatch_red.png", draw);
-  pieceComponents[PieceID.GREEN] = new PieceComponent("/pieces/swatch_green.png", draw);
+  pieceComponents[PieceID.BLUE] = new PieceComponent("pieces/swatch_blue.png", draw);
+  pieceComponents[PieceID.RED] = new PieceComponent("pieces/swatch_red.png", draw);
+  pieceComponents[PieceID.GREEN] = new PieceComponent("pieces/swatch_green.png", draw);
 
   for (let i = 0; i < 8; i++) {
     const piece: GridPiece = { pieceID: i, tile: { x: -1, y: -1 }, index: i };
